@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Minha Agenda</string>
+    <string name="title_activity_cad_eventos">CadEventosActivity</string>
+    <string name="title_activity_cad_evento">Eventos</string>
 </resources>
