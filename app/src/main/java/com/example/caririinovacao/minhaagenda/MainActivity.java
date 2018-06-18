@@ -15,11 +15,11 @@ public class MainActivity extends AppCompatActivity {
 
        ImageButton btn_add = (ImageButton)findViewById(R.id.btn_add);
        btn_add.setOnClickListener(new View.OnClickListener() {
-           @Override
-           public void onClick(View view) {
-               setContentView(R.layout.activity_cad_evento);
-           }
-       });
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this,CadEventoActivity.class));
+            }
+        });
     }
 
 
