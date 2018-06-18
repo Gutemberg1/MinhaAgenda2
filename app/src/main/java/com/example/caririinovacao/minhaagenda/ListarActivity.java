@@ -15,7 +15,7 @@ public class ListarActivity extends AppCompatActivity {
 
     ListView lista;
     Cursor cursor;
-    
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
