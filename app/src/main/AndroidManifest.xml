@@ -19,6 +19,10 @@
         <activity
             android:name=".CadEventoActivity"
             android:label="@string/title_activity_cad_evento"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ListarActivity"
+            android:label="@string/title_activity_listar"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
