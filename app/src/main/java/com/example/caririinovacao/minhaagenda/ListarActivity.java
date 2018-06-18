@@ -15,8 +15,7 @@ public class ListarActivity extends AppCompatActivity {
 
     ListView lista;
     Cursor cursor;
-    String codigo;
-    AlertDialog alerta;
+    
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
