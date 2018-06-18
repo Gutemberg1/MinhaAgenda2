@@ -13,10 +13,11 @@
         android:layout_height="wrap_content"
         android:text="Cadastrar" />
 
-    <ImageButton
+    <Button
         android:id="@+id/btn_add"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:text="Cadastrar"
         app:srcCompat="@android:drawable/ic_input_add" />
 
     <TextView
@@ -25,9 +26,10 @@
         android:layout_height="wrap_content"
         android:text="Listar" />
 
-    <ImageButton
+    <Button
         android:id="@+id/btn_listar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:text="Listar"
         app:srcCompat="@android:drawable/ic_menu_agenda" />
 </LinearLayout>
