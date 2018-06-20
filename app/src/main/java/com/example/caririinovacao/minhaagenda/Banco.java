@@ -12,6 +12,8 @@ public class Banco extends SQLiteOpenHelper{
     }
 
     @Override
+    //metodo que efetivamente cria o banco
+    //recebe um base sqlite, insere um sql de cração de banco e executa
     public void onCreate(SQLiteDatabase db) {
         String sql = "CREATE TABLE evento (" +
                 "_id integer primary key autoincrement not null," +

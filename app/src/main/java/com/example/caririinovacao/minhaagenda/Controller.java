@@ -13,6 +13,10 @@ public class Controller {
         banco = new Banco(context);
     }
 
+    //metodo inserir, recebe por parametro os campos a serem inseridos no banco
+    //é preciso criar uma base sqlite e um objeto banco, deve-se criar tbm um
+    //contentvalues que recebe os campos e se encarrega de inserir os dados
+    //na base
     public String inserir(String descr, String tipo, String hora, String data) {
         ContentValues v;
         long result;
@@ -35,7 +39,9 @@ public class Controller {
         }
 
     }
-
+    //metodo lista, ultilizado para listar o que já está gravado no banco
+    //deve-se criar um cursor que se encarregará de execurar uma query no banco
+    //e percorer toda a tabela até não ter mais o que buscar
     public Cursor lista() {
         Cursor cursor;
         String[] campos = {"_id", "descr", "tipo", "hora", "data"};
@@ -47,7 +53,7 @@ public class Controller {
         db.close();
         return cursor;
     }
-
+    //metodo buscaid, bem parecido com o lista, porém faz uma busca direcionada por um id
     public Cursor buscaID(int id){
         Cursor cursor;
         String[] campos = {"_id", "descr", "tipo", "hora", "data"};
@@ -60,6 +66,10 @@ public class Controller {
         db.close();
         return cursor;
     }
+    //metodo alterar, recebe todos os dados referentes a alteração
+    //ultiliza um contentvalues para organizar todos esses dados
+    //ultilizando o objeto banco instanciado no inico do cod e o objeto base sqlite
+    //este metodo busca a tupla referente ao id previamente passado e subistituo os valores da tupla
 
     public String alterar (int id, String descr, String tipo, String hora, String data){
         ContentValues valores;
@@ -85,7 +95,9 @@ public class Controller {
             return "Registro alterado com sucesso";
 
     }
-
+    //metodo deletar,ultilizando o id previamente passado o metodo faz uma busca por esse id
+    //chama o metodo delete do obejeto base sqlite e passa o id, logo a deleção será feita somente na tupla de id
+    //correspondente
     public String deletar (int id){
         String where;
 
