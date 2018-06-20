@@ -59,7 +59,7 @@ public class Controller {
         String[] campos = {"_id", "descr", "tipo", "hora", "data"};
         String where ="_id="+id;
         db = banco.getReadableDatabase();
-        cursor = db.query("cliente",campos,where,null,null,null,null);
+        cursor = db.query("evento",campos,where,null,null,null,null);
         if (cursor != null) {
             cursor.moveToFirst();
         }
